@@ -30,7 +30,7 @@ function Project() {
         </div>
 
         <Image
-          className="p-4 sm:w-1/2 lg:w-1/3 w-full   "
+          className="p-4 sm:w-1/2  w-full shadow-2xl border-2 border-slate-400 "
           src="/images/project1.png"
           width={400}
           height={400}
@@ -39,14 +39,7 @@ function Project() {
       </article>
       {/* Project 2 */}
       <article className="flex flex-wrap text-center justify-center max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <Image
-          className="p-4 sm:w-1/2 lg:w-1/3 w-full "
-          src="/images/project2.png"
-          width={500}
-          height={400}
-          alt="prject 3"
-        />
-        <div className="p-4 sm:w-1/2 lg:w-1/3 w-full text-left">
+        <div className="p-4 sm:w-1/2 lg:w-1/3 w-full text-left lg:order-2">
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
             Project: States of Notion
           </p>
@@ -62,10 +55,18 @@ function Project() {
             Take a Look!
           </a>
         </div>
+
+        <Image
+          className="p-4 sm:w-1/2  w-full lg:order-1 shadow-2xl border-2 border-slate-400 "
+          src="/images/project2.png"
+          width={500}
+          height={400}
+          alt="prject 3"
+        />
       </article>
       {/* Project 3 */}
       <article className="flex flex-wrap  text-center justify-center max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className=" sm:w-1/2 lg:w-1/3 w-full  text-left">
+        <div className=" p-4 sm:w-1/2 lg:w-1/3 w-full text-left">
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
             Project: Drag and Drop Week
           </p>
@@ -82,7 +83,7 @@ function Project() {
           </a>
         </div>
         <Image
-          className="p-4 sm:w-1/2 lg:w-1/3 w-full "
+          className="p-4 sm:w-1/2 w-full shadow-2xl border-2 border-slate-400 "
           src="/images/project3.png"
           width={500}
           height={400}

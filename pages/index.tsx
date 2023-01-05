@@ -4,8 +4,16 @@ import Project from "./components/Project";
 import Skills from "./components/Skills";
 
 import { useRef, RefObject } from "react";
+import { useRouter } from "next/router";
 
-export default function Home() {
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+function Home() {
+  const router = useRouter();
+  const { locale } = useRouter();
+  const { t } = useTranslation("home");
+
   // Scroll to section
   const HeaderRef: RefObject<HTMLDivElement> = useRef(null);
   const ProjectRef: RefObject<HTMLDivElement> = useRef(null);
@@ -33,14 +41,12 @@ export default function Home() {
     <div className="bg-gray-800">
       {/* Navbar */}
       <nav className="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
-        <div className="flex items-center justify-between">
-          <a
-            className="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300 "
-            href="#"
-          >
-            Ricardo Dev.
-          </a>
-        </div>
+        <a
+          className="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300 "
+          href="#"
+        >
+          Ricardo Dev.
+        </a>
 
         {/* Nav Items */}
         <div className="flex flex-col mt-4 space-y-2 text-center  lg:visible lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0">
@@ -50,7 +56,7 @@ export default function Home() {
               handleClick("Projects");
             }}
           >
-            Projects
+            {t("Projects")}
           </a>
           <a
             className="text-gray-700 dark:text-gray-200 lg:px-6 cursor-pointer dark:hover:text-blue-400 hover:text-blue-500"
@@ -58,7 +64,7 @@ export default function Home() {
               handleClick("Skills");
             }}
           >
-            Skills
+            {t("Skills")}
           </a>
 
           <a
@@ -67,7 +73,7 @@ export default function Home() {
               handleClick("AboutMe");
             }}
           >
-            About Me
+            {t("About Me")}
           </a>
         </div>
 
@@ -79,14 +85,36 @@ export default function Home() {
             target="_blank"
           >
             <i className="fab fa-github"></i>
-          </a>{" "}
+          </a>
           <a
             className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 text-4xl"
             href="https://linkedin.com/in/ricardo-adorno"
             target="_blank"
           >
             <i className="fab fa-linkedin"></i>
-          </a>{" "}
+          </a>
+          <select
+            className="text-white bg-transparent outline-none cursor-pointer hover:bg-slate-700 p-1 rounded-md leading-tight "
+            onChange={(e) => {
+              router.push(router.pathname, router.pathname, {
+                locale: e.target.value,
+              });
+            }}
+            value={locale}
+          >
+            <option
+              className="bg-transparent  font-bold py-2 px-4  "
+              value="en"
+            >
+              English
+            </option>
+            <option
+              className="bg-transparent  font-bold py-2 px-4  "
+              value="pt"
+            >
+              Português
+            </option>
+          </select>
         </div>
       </nav>
       <div ref={HeaderRef}>
@@ -106,3 +134,13 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["home"])),
+    },
+  };
+}
+
+export default Home;
