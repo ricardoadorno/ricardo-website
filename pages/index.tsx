@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
 
-import { useRef, RefObject } from "react";
+import { useRef, RefObject, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { useTranslation } from "next-i18next";
@@ -13,6 +13,15 @@ function Home() {
   const router = useRouter();
   const { locale } = useRouter();
   const { t } = useTranslation("home");
+
+  // Redirect to pt-BR
+  useEffect(() => {
+    navigator.languages.map((lang) => {
+      if (lang === "pt-BR" || lang === "pt") {
+        router.push("/pt");
+      }
+    });
+  }, []);
 
   // Scroll to section
   const HeaderRef: RefObject<HTMLDivElement> = useRef(null);
@@ -49,9 +58,9 @@ function Home() {
         </a>
 
         {/* Nav Items */}
-        <div className="flex flex-col mt-4 space-y-2 text-center  lg:visible lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0">
+        <div className="flex flex-col mt-4 space-y-2 text-center  lg:visible lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0 font-bold text-xl">
           <a
-            className="text-gray-700 dark:text-gray-200 lg:px-6 cursor-pointer dark:hover:text-blue-400 hover:text-blue-500"
+            className=" text-white lg:px-6 cursor-pointer  hover:text-blue-500 "
             onClick={() => {
               handleClick("Projects");
             }}
@@ -59,7 +68,7 @@ function Home() {
             {t("Projects")}
           </a>
           <a
-            className="text-gray-700 dark:text-gray-200 lg:px-6 cursor-pointer dark:hover:text-blue-400 hover:text-blue-500"
+            className=" text-white lg:px-6 cursor-pointer  hover:text-blue-500"
             onClick={() => {
               handleClick("Skills");
             }}
@@ -68,7 +77,7 @@ function Home() {
           </a>
 
           <a
-            className="text-gray-700  dark:text-gray-200 lg:px-6 cursor-pointer dark:hover:text-blue-400 hover:text-blue-500"
+            className="  text-white lg:px-6 cursor-pointer  hover:text-blue-500"
             onClick={() => {
               handleClick("AboutMe");
             }}

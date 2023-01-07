@@ -1,31 +1,33 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 function Project() {
+  const { t } = useTranslation("home");
+
   return (
     <section className="bg-gray-800">
       <h2
         className="text-4xl font-bold text-white text-center mt-2  pt-4
       "
       >
-        My Projects
+        {t("Projects")}
       </h2>
       {/* Project 1 */}
       <article className="flex flex-wrap  text-center justify-center max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="p-4 sm:w-1/2 lg:w-1/3 w-full text-left">
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl ">
-            Project: Movies API
+            {t("Project1Title")}
           </p>
           <p className="mt-4 max-w-sm text-xl text-gray-300  border-t-2 border-orange-500 p-2">
-            Using the API from The Movie DB, I created a app that allows you to
-            search for movies and get information about them.
+            {t("Project1Content")}
           </p>
           <a
             className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-gray-700 hover:bg-gray-50"
             href="https://movie-db-project-ten.vercel.app/"
             target="_blank"
           >
-            Take a Look!
+            {t("ButtonContent")}
           </a>
         </div>
 
@@ -41,18 +43,17 @@ function Project() {
       <article className="flex flex-wrap text-center justify-center max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="p-4 sm:w-1/2 lg:w-1/3 w-full text-left lg:order-2">
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-            Project: States of Notion
+            {t("Project2Title")}
           </p>
           <p className="mt-4 max-w-sm text-xl text-gray-300 border-t-2 border-cyan-400 p-2">
-            A case study of the Notions toolings to manage states and
-            functionalities.
+            {t("Project2Content")}
           </p>
           <a
             className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-gray-700 hover:bg-gray-50"
             href="https://notion-states-project.vercel.app/"
             target="_blank"
           >
-            Take a Look!
+            {t("ButtonContent")}
           </a>
         </div>
 
@@ -68,18 +69,17 @@ function Project() {
       <article className="flex flex-wrap  text-center justify-center max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className=" p-4 sm:w-1/2 lg:w-1/3 w-full text-left">
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-            Project: Drag and Drop Week
+            {t("Project3Title")}
           </p>
           <p className="mt-4 max-w-sm text-xl text-gray-300 border-t-2 border-orange-500 p-2">
-            Using React, I created a drag and drop app that allows you to plan
-            each hour of the week. With ease
+            {t("Project3Content")}
           </p>
           <a
             className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-gray-700 hover:bg-gray-50"
             href="https://weekly-drag-app.vercel.app/"
             target="_blank"
           >
-            Take a Look!
+            {t("ButtonContent")}
           </a>
         </div>
         <Image
