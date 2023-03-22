@@ -84,6 +84,7 @@ body {
   font-family: "Exo", sans-serif;
   line-height: 1.5;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -619,12 +620,20 @@ footer {
   .projects-section .projects-container .project:nth-child(even) {
     flex-direction: column;
   }
+  .projects-section .projects-container .project .project-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
   .about-section .about-container .about-text {
     max-width: none;
     gap: 0.5rem;
   }
   .about-section .about-container .about-text p {
     margin: 0.5rem 0;
+  }
+  .about-section .about-container .about-image {
+    max-width: 100%;
+    margin: 0 auto;
   }
   .contact-section {
     grid-template-columns: 1fr;

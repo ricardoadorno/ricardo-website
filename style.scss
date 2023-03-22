@@ -138,6 +138,7 @@ body {
   font-family: "Exo", sans-serif;
   line-height: 1.5;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -749,6 +750,11 @@ footer {
         &:nth-child(even) {
           flex-direction: column;
         }
+
+        .project-image {
+          max-width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -761,6 +767,10 @@ footer {
         p {
           margin: 0.5rem 0;
         }
+      }
+      .about-image {
+        max-width: 100%;
+        margin: 0 auto;
       }
     }
   }

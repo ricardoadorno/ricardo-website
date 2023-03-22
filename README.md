@@ -12,7 +12,7 @@
 
 ## Todo
 
-- [ ] Refactor Styles
+- [ ] Refactor Styles and take out styles CDN's
 - [ ] Add SEO & Analytics
 - [ ] Video Presentation
 - [ ] Link CV to download
