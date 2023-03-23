@@ -6,15 +6,20 @@ window.onload = function () {
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
+
       // generate a five digit number for the contact_number variable
       this.contact_number.value = (Math.random() * 100000) | 0;
       // these IDs from the previous steps
+
       emailjs.sendForm("service_pbvy79m", "template_9azbpwg", this).then(
         function () {
-          console.log("SUCCESS!");
+          document.getElementById("contact-form").innerHTML =
+            "Message sent successfully!";
         },
         function (error) {
-          console.log("FAILED...", error);
+          console.log(error);
+          document.getElementById("contact-form").innerHTML =
+            "Oops... Something went wrong.";
         }
       );
     });
@@ -29,11 +34,12 @@ if (!localStorage.getItem("lang")) {
 
 function detectLang() {
   var lang = navigator.languages;
-  lang.find((element) => {
+  console.log(lang);
+  lang.map((element) => {
     if (element === "pt-BR" || element === "pt") {
-      window.location.href = "index-pt.html";
       localStorage.setItem("lang", "pt");
-    } else {
+      window.location.href = "index-pt.html";
+    } else if (element === "en-US" || element === "en") {
       localStorage.setItem("lang", "en");
     }
   });
@@ -51,7 +57,7 @@ function changeLang() {
   }
 }
 
-// Handle theme schema
+// * Handle theme schema
 const body = document.querySelector("body");
 const menuToggle = document.querySelector(".toggle--theme");
 

@@ -9,6 +9,7 @@
 - [x] Animations
 - [x] Intercionalization (EN/PT)
 - [x] Dark & Light Mode
+- [x] Website Copy
 
 ## Todo
 

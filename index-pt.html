@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt" style=" scroll-behavior: smooth;">
+<html lang="pt"  style=" scroll-behavior: smooth;"
+>
   <head>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico?">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ricardo Dev.</title>
+    <!-- AOS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -12,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -42,15 +47,27 @@
         emailjs.init("HV8VQDkYP9b6fdRs2");
       })();
     </script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+      <button  class="toggle--theme"></button>
     <div class="container">
       <!-- Navbar -->
       <nav class="navbar" data-aos="fade-in"  data-aos-duration="700" data-aos-delay="500" data-aos-easing="ease-in-out" >
         <div class="brand">Ricardo Dev</div>
         <ul class="nav-links">
-          <li><a data-scroll href="#projects" >Projetos</a></li>
-          <li><a data-scroll href="#techs">Tech</a></li>
-          <li><a data-scroll href="#about">Sobre mim</a></li>
-          <li><a data-scroll href="#contact">Contato</a></li>
+          <li><a data-scroll href="#projects" >
+            Projetos
+          </a></li>
+          <li><a data-scroll href="#techs">
+            Tecnologias
+          </a></li>
+          <li><a data-scroll href="#about">
+            Sobre Mim
+          </a></li>
+          <li><a data-scroll href="#contact">
+            Contato
+            
+          </a></li>
         </ul>
         <div class="social-links">
           <a target="_blank" href="https://github.com/ricardoadorno"
@@ -61,113 +78,126 @@
            aria-label="github"
           >
             <i class="fa-brands fa-linkedin"></i>
-          </a>
+          </a>          
           <select id="lang-selector"
           >
-            <option value="pt">Pt</option>
-            <option value="en">En</option>
+          <option value="pt">
+            Português
+          </option>
+            <option value="en">Inglês</option>
           </select>
         </div>
+        
       </nav>
 
       <!-- Hero -->
       <section class="hero" data-aos="fade-up"  data-aos-duration="700" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true">
         <div class="hero-content">
-          <h1 class="txt-xl txt-bolder">Landing template for  startups</h1>
+          <h1>
+            <div class="highlight">
+            FullStack Dev </div> <br /> 
+            Sempre pronto para aprender e codar
+
+          </h1>
           <p>
-            Our landing page template works on all devices, so you only have to
-            set it up once, and get beautiful results forever.
+
+            Apaixonado por technolgia, sempre em busca de novos desafios e oportunidades para aprender e melhorar minhas habilidades.
           </p>
           <div class="button-group">
-            <button class="btn">Get Started</button>
-            <button class="btn btn-outline-secundary">Projects</button>
+            <a  data-scroll href="#projects"
+             class="btn">
+             Projetos
+            </a>
+            <a class="btn btn-outline-secundary" data-scroll href="#contact">
+              Entre em Contato!
+            </a>
           </div>
         </div>
-        <img class="hero-image" src="https://placehold.it/600x400" alt="hero" />
+<lottie-player class="hero-image" src="https://assets7.lottiefiles.com/packages/lf20_ydwgie6t.json"  background="transparent"  speed="1"  style="width: 100%; " loop  autoplay></lottie-player>
+
       </section>
+
+      
 
       <!-- Techs -->
       <section id="techs" class="techs-section"  
       >
-        <div class="techs-text" data-aos="fade-in"  data-aos-duration="500" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true">
-          <div class="badge badge-secundary ">Reach goals that matter
+        <hgroup data-aos="fade-in"  data-aos-duration="500" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true">
+          <div class="badge badge-secundary "> 
+            Em Busca de Aprender Ainda Mais!
           </div>
-          <h1 class="txt-l text-bolder">Landing template for startups</h1>
+          <h2>
+            Stack Atual
+          </h2>
           <p>
-            Our landing page template works on all devices, so you only have to
-            set it up once, and get beautiful results forever.
+            As tecnologias mais usadas e avançadas da industria.
           </p>          
-        </div>
+        </hgroup>
         <div class="techs-container">
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
               <i class="fa-brands fa-html5"></i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">HTML</h1>
+              <h4>HTML & CSS</h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Uma base profunda em tecnologias da web como HTML, CSS e APIs do Browser. A fetch API, criação de layouts responsivos além de conhecimento em frameworks CSS como Bootstrap e Tailwind.
               </p>
             </div>
           </div>
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-react"></i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">CSS</h1>
+              <h4>React</h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                A poderosa biblioteca JavaScript para construir interfaces de usuário. Tenho experiência com React Hooks, State Management (Redux) e Next.
               </p>
             </div>
           </div>
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-js"></i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">React</h1>
+              <h4>JavaScript & Typescript</h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Amplo conhecimento de JavaScript e seus princípios fundamentais. Além disso, experiência com Typescript e práticas de código limpo.
               </p>
             </div>
           </div>
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-node"></i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">Landing template for startups</h1>
+              <h4>Node</h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                A tecnologia de back-end que usa JavaScript no servidor. Autenticação (JWT), API REST e integração de banco de dados são algumas das minhas habilidades em relação ao Node.
               </p>
             </div>
           </div>
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-solid fa-database"></i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">Landing template for startups</h1>
+              <h4>SQL
+              </h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Tenho um bom conhecimento de SQL e como usá-lo para criar, ler, atualizar e excluir dados  de um banco de dados (CRUD).
               </p>
             </div>
           </div>
           <div class="tech" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="700" data-aos-easing="ease-in-out" data-aos-once="true">
             <div class="circle-element">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-figma"> </i>
             </div>
             <div class="text-element">
-              <h1 class="txt-m">Landing template for startups</h1>
+              <h4>Figma</h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                A ferramenta de design mais popular para criar interfaces de usuário. Como desenvolvedor, acho útil ter um bom entendimento das ferramentas de design e dos princípios de design.
               </p>
             </div>
           </div>
@@ -177,126 +207,122 @@
 
       <!-- Projects -->
       <section class="projects-section" id="projects" data-aos="fade-in"  data-aos-duration="500" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true"	>
-        <div class="projects-header">
-          <h1 class="txt-l text-bolder">Landing template for startups</h1>
+        <hgroup>
+          <h2 >
+            Meus Projects
+          </h2>
           <p>
-            Our landing page template works on all devices, so you only have to
-            set it up once, and get beautiful results forever.
+            Uma seleção de meus projetos pessoais. Aplicação das tecnologias que aprendi.
           </p>
-        </div>
+        </hgroup>
         <div class="projects-container">
           <div class="project" data-aos="fade-left"  data-aos-duration="1100" data-aos-delay="400" data-aos-easing="ease-in-out" >
             <div class="project-text">
-              <small>More speed. Less spend
+              <small> Consumo de API's
               </small>
-              <h1 class="txt-xm">Landing template for startups</h1>
+              <h3 > Movies DB Api
+
+              </h3>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Um aplicativo que usa o Movies DB Api para mostrar os filmes mais populares. Ele também tem uma barra de pesquisa para procurar filmes.
               </p>
               <ul>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
             </ul>
 
-              <button class="btn">See Project</button>
+              <a href="https://movie-db-project-ten.vercel.app/" target="_blank" class="btn">
+                Vem da uma olhada!
+              </a>
+               
             </div>
+            <div class="project-image">
             <img
-              class="project-image"
-              src="https://placehold.it/500x400"
+              src="images/projects/movies.png"
               alt="project"
             />
+            </div>
             
           </div>
           <div class="project" data-aos="fade-right"  data-aos-duration="1100" data-aos-delay="400" data-aos-easing="ease-in-out" >
             <div class="project-text">
-              <small>More speed. Less spend
+              <small> States and use of Libraries
               </small>
-              <h1 class="txt-xm">Landing template for startups</h1>
+              <h3 >
+                Notion States
+
+              </h3>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Usando o React e seu ecossistema, recriei algumas das funcionalidades do Notion.
               </p>
               <ul>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
+
             </ul>
 
-              <button class="btn">See Project</button>
-            </div>
-            <img
-              class="project-image"
-              src="https://placehold.it/500x400"
-              alt="project"
-            />
-            
-          </div>
-          <div class="project" data-aos="fade-left"  data-aos-duration="1100" data-aos-delay="400" data-aos-easing="ease-in-out" >
-            <div class="project-text">
-              <small>More speed. Less spend
-              </small>
-              <h1 class="txt-xm">Landing template for startups</h1>
-              <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
-              </p>
-              <ul>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
-              <li class="project-list">Landing template</li>
-            </ul>
+            <a href="https://notion-states-project.vercel.app/" target="_blank" class="btn">                Vem da uma olhada!
+            </a>
 
-              <button class="btn">See Project</button>
             </div>
+
+            <div class="project-image">
             <img
-              class="project-image"
-              src="https://placehold.it/500x400"
+              src="images/projects/notion.png"
               alt="project"
             />
-            
           </div>
-          
+            
+          </div>          
       </section>
 
       <div class="divider"></div>
 
       <!-- About Me -->
       <section id="about" class="about-section">
-        <div  class="about-text" >
-          <h1  class="txt-l text-bolder">Landing template for startups</h1>          
-        </div>
+        <hgroup >
+          <h2  >
+
+            Sobre Mim
+
+          </h2>          
+        </hgroup>
         <div  class="about-container">
         <div class="about-text" data-aos="slide-right"  data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease-in-out" data-aos-once="true">
 
-          <h1 class="txt-xm">Landing template for startups</h1>
+          <h3 >
+            Um desenvolvedor com grandes aspirações
+          </h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quia mollitia neque voluptatum beatae totam quis aliquam veritatis dicta modi error iure, nemo quaerat nihil!
+            Olá! Sou o Ricardo, estudante de Sistemas de Informação pela UFBA(Universidade Federal da Bahia) e Desenvolvedor FullStack. Sou apaixonado por aprender novas tecnologias e criar coisas novas. Atualmente, estou procurando uma oportunidade de crescer como desenvolvedor.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quia mollitia neque voluptatum beatae totam quis aliquam veritatis dicta modi error iure, nemo quaerat nihil!
+            Também sou uma pessoa apaixonada por negócios e inovação. Aspiro em ser um líder técnico, adoro trabalhar em equipe, aprender com os outros e também ensinar, para mim é muito importante fomentar uma cultura de aprendizado e crescimento em qualquer ambiente.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Meu sonho é ser CTO da Notion ou empresas similares, quero poder criar um produto que ajude as pessoas a serem mais produtivas e criativas.
           </p>
         </div>
-        <img class="about-image" src="https://placehold.it/450x450" alt="about" data-aos="fade-in"  data-aos-duration="700" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true"/>
+        <div class="about-image">
+          <img  src="images/Me.jpg" alt="about" data-aos="fade-in"  data-aos-duration="700" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-once="true"/>
+        </div>
+        
       </div>
       </section>
+
 
 
       <!-- Contact -->     
       <div class="divider"></div>
 
 
-      <div id="contact" class="header2">
-        Get in Touch
-      </div>
+      <hgroup>
+      <h2 id="contact" >
+        Meus contatos
+      </h2>
+    </hgroup>
       <section class="contact-section">
 
           <form class="contact-form" id="contact-form" data-aos="flip-right"  data-aos-duration="1100" data-aos-delay="500" data-aos-easing="ease-in-out">
-            <h4>Send a Message</h4>
+            <h4>
+              Envie uma mensagem!
+            </h4>
             
           
             <div class="group-form">
@@ -313,30 +339,31 @@
           </div>
           <div class="g-recaptcha" data-sitekey="6LeU2N8kAAAAAB8mVsKEiDMz6Vcu7rqATYKygb8o"></div>
 
-          <button class="btn" value="Send" type="submit">Send</button>
+          <button class="btn" value="Send" type="submit">Enviar</button>
           </form>
 
           <div class="contact-content">
             
-              <h1 class="txt-m">Chat with me</h1>
+              <h4>
+                Afim de bater um papo?
+              </h4>
               <p>
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                Estou sempre aberto para falar sobre tecnologia e novas ideias. Sinta-se livre para me contatar.
               </p>
               <ul class="contact-links"
               >
               <li>
-                <a href="#">
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=5575992420658&text&type=phone_number&app_absent=0">
                 <i class ="fa-brands fa-whatsapp"></i>
                 +55 (75) 992420605</a>
               </li>
               <li>
-                <a href="https://github.com/ricardoadorno">
+                <a target="_blank" href="https://github.com/ricardoadorno">
                 <i class ="fa-brands fa-github"></i>
                 github.com/ricardoadorno</a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/ricardo-adorno">
+                <a target="_blank" href="https://www.linkedin.com/in/ricardo-adorno">
                 <i class ="fa-brands fa-linkedin"></i>
                 linkedin.com/in/ricardo-adorno</a>
               </li>
@@ -350,8 +377,9 @@
       
     </div>
     <footer>
-      © Ricardo Dev. All rights reserved.
+      © Ricardo Dev. Todos os direitos reservados.
     </footer>
+
     <script src="main.js"></script>
 
   </body>

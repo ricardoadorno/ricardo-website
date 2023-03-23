@@ -189,8 +189,15 @@ body {
 .hero .button-group {
   display: flex;
   gap: 1rem;
+  margin-top: 1.2rem;
 }
 .hero .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero a {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -465,6 +472,10 @@ body {
   border: none;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn:hover {
   background-color: #7c3aed;
@@ -528,8 +539,14 @@ body {
   transition: background-color 1s ease;
 }
 
+.highlight {
+  color: #f59e0b;
+  display: inline-block;
+}
+
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
+  line-height: 1.3;
   font-weight: 700;
 }
 
@@ -554,6 +571,7 @@ p {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   color: #a6a6a6;
+  margin: 1rem 0 0 0;
 }
 
 h1,
